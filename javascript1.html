@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript1</title>
+  </head>
   <body>
+    <h1>JavaScript1</h1>
+
     <ul id="list1"></ul>
 
     <script>
+      const list = document.getElementById("list1");
+
       // loop from 1 to 20
       for (let i = 1; i <= 20; i++) {
         // skip 5, 10 and 15
@@ -11,8 +19,10 @@
           continue;
         }
 
-        // add a new list item to the <ul> with id="list1"
-        document.getElementById("list1").innerHTML += <li>${i}</li>;
+        // create <li> and add to the <ul>
+        const li = document.createElement("li");
+        li.textContent = i;
+        list.appendChild(li);
       }
     </script>
   </body>
