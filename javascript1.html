@@ -1,17 +1,18 @@
+<!DOCTYPE html>
 <html>
   <body>
     <ul id="list1"></ul>
 
     <script>
-      //Add your code here
+      // loop from 1 to 20
       for (let i = 1; i <= 20; i++) {
-        // Skip 5, 10, 15
+        // skip 5, 10 and 15
         if (i === 5 || i === 10 || i === 15) {
           continue;
         }
 
-        // Add item to the UL
-        document.getElementById("list1").innerHTML += `<li>${i}</li>`;
+        // add a new list item to the <ul> with id="list1"
+        document.getElementById("list1").innerHTML += <li>${i}</li>;
       }
     </script>
   </body>
